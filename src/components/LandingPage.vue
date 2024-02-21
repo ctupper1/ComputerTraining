@@ -1,6 +1,7 @@
 <template>
   <div class="landing-page">
     <h1>Welcome to the Practice App</h1>
+    <h1>Jahan Polatova</h1>
     <button @click="navigateToKeyboardPractice">Keyboard Practice</button>
     <button @click="navigateToMousePractice">Mouse Practice</button>
   </div>
