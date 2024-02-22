@@ -1,8 +1,7 @@
 <template>
   <div class="keyboard-practice">
+    <h2>Press the key: <br/><br/><h1>{{ currentKey }}</h1></h2>
     <p>Score: {{ score }}</p>
-
-    <h1>Press the key: <br/><br/>{{ currentKey }}</h1>
   </div>
 </template>
 
@@ -11,7 +10,8 @@ export default {
   data() {
     return {
       currentKey: this.getRandomKey(),
-      score: 0
+      score: 0,
+      chimeSound: new Audio(require('@/assets/chime.mp3')) // Replace 'chime.mp3' with your chime sound file name
     };
   },
   mounted() {
@@ -29,6 +29,7 @@ export default {
     handleKeyPress(event) {
       if (event.key.toUpperCase() === this.currentKey) {
         this.score++;
+        this.chimeSound.play(); // Play the chime sound
         this.currentKey = this.getRandomKey(); // Generate next key
       }
     }
@@ -40,18 +41,19 @@ export default {
 .keyboard-practice {
   text-align: center;
   margin-top: 50px;
+  background-color: aliceblue;
 }
 .keyboard-practice h1 {
-  font-size: 40px;
+  color:coral;
+  font-size: 180px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 .keyboard-practice p {
-  margin-top: 100px;
+  padding-bottom: 10px;
+  padding-right: 10px;
   font-weight: bold;
-  text-align: start;
-
-
+  text-align: end;
 }
-
 </style>
 
 
