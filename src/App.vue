@@ -38,7 +38,8 @@ export default {
 }
 
 .router-view {
-  max-height:max-content;
+  padding-top: 3em;
+  max-height:80vh;
   flex-grow: 1;
 }
 </style>

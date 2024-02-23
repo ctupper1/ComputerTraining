@@ -1,9 +1,8 @@
 <template>
   <div class="spelling-game">
-    <h2>Spelling Game</h2>
-    <vuedraggable class="letters" :list="letters" @end="checkSpelling">
-      <div class="letter-card" v-for="letter in letters" :key="letter">{{ letter }}</div>
-    </vuedraggable>
+    <vuedraggable class="letters" :list="letters"  @end="checkSpelling">
+  <div class="letter-card" v-for="letter in letters" :key="letter" :class="{ dragging: dragging }">{{ letter }}</div>
+</vuedraggable>
     <img :src="currentImageUrl" alt="Current Word" />
   </div>
 </template>
@@ -17,16 +16,21 @@ export default {
     vuedraggable: VueDraggableNext
   },
   data() {
-    const images = require.context('@/assets', false, /\.png$/);
+    // Import all images from the assets folder
+    // Replace the regex pattern with your image file extension
+    
+    const images = require.context('@/assets/cartoon_animals_images', false, /\.jpg$/);
     const words = images.keys().map(image => ({
-      text: image.replace(/(\.\/|\.png$)/g, ''),
+      text: image.replace(/(\.\/|\.jpg$)/g, ''),
       imageUrl: images(image),
     }));
     return {
+      chimeSound: new Audio(require('@/assets/chime.mp3')),
       words,
       currentWord: '',
       letters: [],
-      currentImageUrl: ''
+      currentImageUrl: '',
+      dragging: false
 
     };
   },
@@ -40,8 +44,13 @@ export default {
 
   methods: {
     checkSpelling() {
+      this.dragging = false;
       if (this.letters.join('') === this.currentWord) {
-        alert('Correct spelling!');
+        setTimeout(() => {
+          this.dragging = true;
+          this.loadNewWord();
+        }, 100);
+        this.chimeSound.play();
       }
     },
     shuffleLetters() {
@@ -49,7 +58,14 @@ export default {
         const j = Math.floor(Math.random() * (i + 1));
         [this.letters[i], this.letters[j]] = [this.letters[j], this.letters[i]];
       }
-    }
+    },
+    loadNewWord() {
+    const selectedWordObj = this.words[Math.floor(Math.random() * this.words.length)];
+    this.currentWord = selectedWordObj.text;
+    this.currentImageUrl = selectedWordObj.imageUrl;
+    this.letters = this.currentWord.split('');
+    this.shuffleLetters();
+  },
   }
 };
 </script>
@@ -60,6 +76,7 @@ export default {
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   height: 40vh;
 }
 
@@ -77,6 +94,11 @@ export default {
   background-color: #fff; /* white background */
   border-radius: 10px; /* rounded corners */
   cursor: pointer; /* cursor changes to pointer to indicate interactivity */
+  transition: border 0.3s ease;
+
+}
+.letter-card.dragging {
+  border-width: 4px; /* adjust as needed */
 }
 
 img {
