@@ -1,7 +1,7 @@
 <template>
   <div>
   <img alt="Computer logo" src="./assets/Computer.png"> 
-  <img alt="Computer logo" src="./assets/mousecomputer.webp" /> 
+  <!-- <img alt="Computer logo" src="./assets/mousecomputer.webp" />  -->
   <LandingPage/>
   <RouterView />
   </div>

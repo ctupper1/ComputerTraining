@@ -4,7 +4,7 @@
     <h1>Computer Keyboard and Mouse Practice for Children!</h1>
     <h1>Have Fun!</h1>
     <button @click="navigateToKeyboardPractice">Keyboard Practice</button>
-     <img src="src/assets/mousecomputer" alt="PLAY">
+     <img src="../assets/mousecomputer.webp" alt="PLAY" />
     <button @click="navigateToMousePractice">Mouse Practice</button>
   </div>
 </template>
