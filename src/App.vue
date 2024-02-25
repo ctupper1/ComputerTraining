@@ -1,8 +1,8 @@
 <template>
-  <div class="landing-page">
-  <LandingPage />
-  </div>
-  <div class="router-view">
+  <div>
+  <img alt="Computer logo" src="./assets/Computer.png"> 
+  <img alt="Computer logo" src="./assets/mousecomputer.webp" /> 
+  <LandingPage/>
   <RouterView />
   </div>
 </template>
@@ -10,6 +10,7 @@
 <script>
 import LandingPage from './components/LandingPage.vue'
 import { RouterView } from 'vue-router'
+
 
 export default {
   name: 'App',
@@ -22,6 +23,7 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  background-color: cornsilk;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
