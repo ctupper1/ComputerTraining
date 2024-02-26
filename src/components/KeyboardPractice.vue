@@ -1,3 +1,4 @@
+<!-- TODO: fix score display, update style and add a timer -->
 <template>
   <div class="keyboard-practice">
     <h2>Press the key: <br/><br/><h1>{{ currentKey }}</h1></h2>
@@ -41,7 +42,8 @@ export default {
 .keyboard-practice {
   text-align: center;
   margin-top: 50px;
-  background-color: aliceblue;
+  justify-content: center;
+  
 }
 .keyboard-practice h1 {
   color:coral;

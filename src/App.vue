@@ -1,26 +1,39 @@
 <template>
-  <div>
-  <img alt="Computer logo" src="./assets/Computer.png"> 
-  <img alt="Computer logo" src="./assets/mousecomputer.webp" /> 
-  <LandingPage/>
-  <RouterView />
+  <div id="app">
+  <!-- <img alt="Computer logo" src="./assets/Computer.png">  -->
+  <!-- <img alt="Computer logo" src="./assets/mousecomputer.webp" />  -->
+  <!-- <LandingPage/> -->
+  <RouterView class="router-view" />
   </div>
 </template>
 
 <script>
-import LandingPage from './components/LandingPage.vue'
+// import LandingPage from './components/LandingPage.vue'
 import { RouterView } from 'vue-router'
 
 
 export default {
   name: 'App',
   components: {
-    LandingPage,
+    // LandingPage,
     RouterView}
 }
 </script>
 
 <style>
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   background-color: cornsilk;
@@ -30,18 +43,24 @@ export default {
   color: #2c3e50;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
-.landing-page {
+.landing-page div {
   text-align: center;
   padding: 20px;
   flex-shrink: 0;
-  max-height: 20vh;
 }
 
 .router-view {
-  padding-top: 3em;
-  max-height:80vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
+  flex-shrink: 1;
+  align-items: center;
+  justify-content: center;
 }
 </style>
