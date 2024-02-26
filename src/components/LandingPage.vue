@@ -3,8 +3,8 @@
     <h1>Welcome!</h1>
     <h1>Computer Keyboard and Mouse Practice for Children!</h1>
     <h1>Have Fun!</h1>
+     <img src="../assets/mousecomputer.webp" alt="PLAY" /> <br> 
     <button @click="navigateToKeyboardPractice">Keyboard Practice</button>
-     <img src="../assets/mousecomputer.webp" alt="PLAY" />
     <button @click="navigateToMousePractice">Mouse Practice</button>
   </div>
 </template>
@@ -29,6 +29,7 @@ export default {
 .landing-page {
   text-align: center;
   padding: 20px;
+  background-color: cornsilk;
 }
 
 .landing-page h1 {

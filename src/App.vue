@@ -37,11 +37,13 @@ export default {
   padding: 20px;
   flex-shrink: 0;
   max-height: 20vh;
+  background-color: cornsilk;
 }
 
 .router-view {
   padding-top: 3em;
   max-height:80vh;
   flex-grow: 1;
+  background-color: cornsilk;
 }
 </style>
