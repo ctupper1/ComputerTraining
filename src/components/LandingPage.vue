@@ -1,11 +1,21 @@
 <template>
   <div class="landing-page">
-    <h1>Welcome!</h1>
+    <div>
+          <h1>Welcome!</h1>
     <h1>Computer Keyboard and Mouse Practice for Children!</h1>
+    <h2>Choose an option below to get started!</h2>
     <h1>Have Fun!</h1>
-     <img src="../assets/mousecomputer.webp" alt="PLAY" /> <br> 
+
+    </div>
+
+    <div class="center-image">
     <button @click="navigateToKeyboardPractice">Keyboard Practice</button>
     <button @click="navigateToMousePractice">Mouse Practice</button>
+    <button @click="navigateToSpellingGame">Spelling Game</button>
+    <img src="@/assets/mousecomputer.webp" alt="PLAY">
+
+    </div>
+
   </div>
 </template>
 <script>
@@ -26,10 +36,12 @@ export default {
 </script>
 
 <style>
-.landing-page {
+.landing-page * {
   text-align: center;
-  padding: 20px;
+  font-family: 'comic sans ms', cursive, sans-serif;
+  /* padding: 20px; */
   background-color: cornsilk;
+  
 }
 
 .landing-page h1 {
@@ -48,6 +60,10 @@ button:hover {
   background-color: #FFC800;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-  
+
+img {
+  display: block;
+  margin: auto;
+}
 
 </style>

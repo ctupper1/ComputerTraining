@@ -1,5 +1,6 @@
 <template>
 
+<!-- Contains conditional and iterative rendering with f-if and v-for directives. -->
   <div>
     <transition name="fly-in">
     <div v-if="star" class="star">
@@ -77,12 +78,14 @@ export default {
   width: 60px; /* Fixed width */
   height: 60px; /* Fixed height */
   font-size: 60px;
+  border: 2px solid #241313;
+  background-color: #f0f0f0;
 }
 
 .mound div:hover {
   cursor:grab;
-  border: 1px solid #ccc;
-  background-color: beige;
+  background-color:rgb(140, 140, 187);
+  transition: background-color 0.5s ease-in-out;
 }
 
 
@@ -91,10 +94,8 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
-  border: 1px solid #ccc;
   margin: auto;
-  width: 80%;
-  background-color: #f2f2f2;
+  width: 100%;
 }
 
 .star {
@@ -116,7 +117,7 @@ export default {
   0% {
     transform: translateX(-100%) scale(0.9);
   }
-  20% {
+  /* 20% {
     transform: translateX(-80%) scale(0.8);
   }
   40% {
@@ -127,7 +128,7 @@ export default {
   }
   80% {
     transform: translateX(-20%) scale(1.12);
-  }
+  } */
   100% {
     transform: translateX(0) scale(1.0);
   }

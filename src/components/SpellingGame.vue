@@ -3,7 +3,7 @@
     <vuedraggable class="letters" :list="letters"  @end="checkSpelling">
   <div class="letter-card" v-for="letter in letters" :key="letter" :class="{ dragging: dragging }">{{ letter }}</div>
 </vuedraggable>
-    <img :src="currentImageUrl" alt="Current Word" />
+    <img id="icon" :src="currentImageUrl" alt="Current Word" />
   </div>
 </template>
 
@@ -73,12 +73,13 @@ export default {
 <style scoped>
 
 .spelling-game {
+  justify-content: center;
   display: flex;
   flex-direction: column;
   text-align: center;
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  height: 40vh;
-}
+  height: 100vh;
+  }
 
 .letters {
   display: flex;
@@ -101,11 +102,13 @@ export default {
   border-width: 4px; /* adjust as needed */
 }
 
-img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  flex-shrink: 1;
+img { 
+  width: 300px;
+  height: 300px;
+  margin: 2em auto;
+  transition: border 0.3s ease;
+  border: 2px solid #333;
+  border-radius: 10%;
 }
 
 </style>
