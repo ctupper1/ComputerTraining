@@ -6,7 +6,9 @@
     <div v-if="star" class="star">
       <img src="@/assets/star.png" alt="star" />
     </div>
-  </transition>
+  </transition>     
+   <h1>Drag the numbers to the correct order</h1>
+
     <vuedraggable class="mound" :list="objects" @end="checkOrder">
       <div v-for="object in objects" :key="object.id">{{ object.name }}
       </div>
@@ -66,6 +68,15 @@ export default {
 
 
 <style>
+
+h1 {
+  text-align: center;
+  font-family: 'comic sans ms', cursive, sans-serif;
+  font-size: 30px;
+  color: #241313;
+  margin-top: 300px;
+
+}
 .mound div {
   display: flex;
   align-items: center;
@@ -79,7 +90,7 @@ export default {
   height: 60px; /* Fixed height */
   font-size: 60px;
   border: 2px solid #241313;
-  background-color: #f0f0f0;
+  background-color:#be7c7c;
 }
 
 .mound div:hover {

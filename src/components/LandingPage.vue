@@ -39,9 +39,6 @@ export default {
 .landing-page * {
   text-align: center;
   font-family: 'comic sans ms', cursive, sans-serif;
-  /* padding: 20px; */
-  background-color: cornsilk;
-  
 }
 
 .landing-page h1 {
@@ -49,15 +46,16 @@ export default {
 }
 
 button {
-  margin: 10px;
+  margin: 15px;
   padding: 10px 20px;
   font-size: 18px;
   cursor: pointer;
-  background-color: yellow ;
+  background-color: rgb(162, 123, 168) ;
+  border-radius: 10px;
 }
 
 button:hover {
-  background-color: #FFC800;
+  background-color: #61d3ea;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
