@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-  <!-- <img alt="Computer logo" src="./assets/Computer.png">  -->
-  <!-- <img alt="Computer logo" src="./assets/mousecomputer.webp" />  -->
   <!-- <LandingPage/> -->
   <RouterView class="router-view" />
   </div>
@@ -32,11 +30,11 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: cornsilk;
 
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  background-color: cornsilk;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

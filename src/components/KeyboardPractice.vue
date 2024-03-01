@@ -1,5 +1,7 @@
 <!-- TODO: fix score display, update style and add a timer -->
 <template>
+    <button @click="$router.push('/')">Back</button>
+
   <div class="keyboard-practice">
     <h2>Press the key: <br/><br/><h1>{{ currentKey }}</h1></h2>
     <p>Score: {{ score }}</p>
@@ -39,6 +41,19 @@ export default {
 </script>
 
 <style scoped>
+button {
+  margin: 15px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: rgb(162, 123, 168) ;
+  border-radius: 10px;
+  width:10%;
+}
+button:hover {
+  background-color: #61d3ea;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
 .keyboard-practice {
   text-align: center;
   margin-top: 50px;

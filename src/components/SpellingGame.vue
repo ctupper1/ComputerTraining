@@ -1,5 +1,8 @@
 <template>
+    <button @click="$router.push('/')">Back</button>
+  
   <div class="spelling-game">
+    <h1>Arrange the letters to spell the word!</h1>
     <vuedraggable class="letters" :list="letters"  @end="checkSpelling">
   <div class="letter-card" v-for="letter in letters" :key="letter" :class="{ dragging: dragging }">{{ letter }}</div>
 </vuedraggable>
@@ -71,7 +74,20 @@ export default {
 </script>
 
 <style scoped>
+button {
+  margin: 15px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: rgb(162, 123, 168) ;
+  border-radius: 10px;
+  width:10%;
+}
 
+button:hover {
+  background-color: #61d3ea;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
 .spelling-game {
   justify-content: center;
   display: flex;

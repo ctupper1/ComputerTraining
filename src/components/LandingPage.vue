@@ -1,6 +1,8 @@
 <template>
   <div class="landing-page">
     <div>
+      <!-- <img alt="Computer logo" src="../assets/Computer.png">  -->
+
           <h1>Welcome!</h1>
     <h1>Computer Keyboard and Mouse Practice for Children!</h1>
     <h2>Choose an option below to get started!</h2>
@@ -35,7 +37,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .landing-page * {
   text-align: center;
   font-family: 'comic sans ms', cursive, sans-serif;

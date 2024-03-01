@@ -1,4 +1,5 @@
 <template>
+    <button @click="$router.push('/')">Back</button>
 
 <!-- Contains conditional and iterative rendering with f-if and v-for directives. -->
   <div>
@@ -67,7 +68,21 @@ export default {
 
 
 
-<style>
+<style scoped>
+button {
+  margin: 15px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: rgb(162, 123, 168) ;
+  border-radius: 10px;
+  width:10%;
+}
+
+button:hover {
+  background-color: #61d3ea;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
 
 h1 {
   text-align: center;
@@ -113,35 +128,26 @@ h1 {
   position: absolute;
   top: 45%;
   left: 35%;
-  /* Add your star styles here... */
+  animation: moveInArc 4s;
 }
 
-.fly-in-enter-active {
-  animation: fly-in 4s;
+/* .moveInArc-active {
+  animation: moveInArc 4s;
 }
 
-.fly-in-leave-active {
-  animation: fly-in 1s reverse;
-}
+.moveInArc-leave-active {
+  animation: moveInArc 5s infinite;
+} */
 
-@keyframes fly-in {
+@keyframes moveInArc {
   0% {
-    transform: translateX(-100%) scale(0.9);
+    transform: rotateY(0deg) translateZ(0);
   }
-  /* 20% {
-    transform: translateX(-80%) scale(0.8);
+  20% {
+    transform: rotateY(180deg) translateZ(500px);
   }
-  40% {
-    transform: translateX(-60%) scale(0.96);
-  }
-  60% {
-    transform: translateX(-40%) scale(1.04);
-  }
-  80% {
-    transform: translateX(-20%) scale(1.12);
-  } */
   100% {
-    transform: translateX(0) scale(1.0);
+    transform: rotateY(360deg) translateZ(0);
   }
 }
 </style>
