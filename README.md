@@ -1,4 +1,4 @@
-# new-project
+# Computer Training
 
 ## Project setup
 ```
