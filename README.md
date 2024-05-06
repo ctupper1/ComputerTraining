@@ -3,6 +3,7 @@
 ### Works on mobile but the idea was to create a few simple games/activities that familiarize a new user with how to move and click a mouse, and learn the layout of a standard keyboard.
 
 ## Project setup
+Clone remote repository
 ```
 npm install
 ```
@@ -12,15 +13,3 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
