@@ -3,12 +3,9 @@
 ### Works on mobile but the idea was to create a few simple games/activities that familiarize a new user with how to move and click a mouse, and learn the layout of a standard keyboard.
 
 ## Project setup
-Clone remote repository
+Clone remote repository, then run:
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
