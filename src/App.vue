@@ -56,12 +56,7 @@ body {
 
 .router-view {
   margin: auto;
-  display: flex;
-  flex-direction: column;
   flex-grow: 1;
-  background-color: cornsilk;
-  flex-shrink: 1;
   align-items: center;
-  justify-content: center;
 }
 </style>
